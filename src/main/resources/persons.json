@@ -1,0 +1,20 @@
+[
+	{
+		"_class": "io.pivotal.demo.domain.Person",
+		"emailAddress" : "johndoe@nowhere.com",
+		"firstName" : "John",
+		"lastName" : "Doe"
+	},
+	{
+		"_class": "io.pivotal.demo.domain.Person",
+		"emailAddress" : "janedoe@somewhere.com",
+		"firstName" : "Jane",
+		"lastName" : "Doe"
+	},
+	{
+		"_class": "io.pivotal.demo.domain.Person",
+		"emailAddress" : "bobevans@someplace.com",
+		"firstName" : "Bob",
+		"lastName" : "Evans"
+	}
+]		

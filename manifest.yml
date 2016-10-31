@@ -1,0 +1,6 @@
+---
+applications:
+- name: spring-person
+  memory: 1G
+  random-route: true
+  path: target/redis-0.0.1-SNAPSHOT.jar

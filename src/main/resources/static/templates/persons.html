@@ -1,0 +1,28 @@
+<div id="persons" ng-init="init()">
+    <div class="page-header">
+        <h1>Persons</h1>
+        <div>
+            <span> [ view as: </span>
+            <a href="" ng-click="setPersonsView('grid')"><span class="glyphicon glyphicon-th"></span></a>
+            <a href="" ng-click="setPersonsView('list')"><span class="glyphicon glyphicon-th-list"></span></a>
+            <span> | sort by: </span>
+            <a href="" ng-click="sortField='emailAddress'">email address</a>
+            <a href="" ng-click="sortField='firstName'">first name</a>
+            <a href="" ng-click="sortField='lastName'">last name</a>
+            <a href="" ng-click="sortDescending=!sortDescending">
+                <span class="glyphicon" ng-class="{'glyphicon-chevron-up' : !sortDescending, 'glyphicon-chevron-down' : sortDescending}"></span>
+            </a>
+            <span> | </span>
+            <a href="" ng-click="addPerson()"><span class="glyphicon glyphicon-plus"></span>add a person</a>
+            <span> ] </span>
+        </div>
+    </div>
+
+    <div class="row">
+        <div ng-include src="'templates/status.html'"></div>
+    </div>
+
+    <div class="row multi-columns-row">
+        <div ng-include src="personsView"></div>
+    </div>
+</div>

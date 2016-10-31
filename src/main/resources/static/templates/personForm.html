@@ -1,0 +1,27 @@
+<div class="modal-header">
+    <h3 ng-show="personAction === 'add'">Add a Person</h3>
+    <h3 ng-show="personAction === 'update'">Edit a person</h3>
+</div>
+<div class="modal-body">
+    <form name="personForm" role="form">
+        <div class="form-group has-feedback" ng-class="{'has-warning': personForm.emailAddress.$invalid, 'has-success': personForm.emailAddress.$valid}">
+            <label for="emailAddress">Email Address</label>
+            <input type="text" class="form-control input-large" id="emailAddress" name="emailAddress" readonly ng-model="person.emailAddress">
+            <span class="glyphicon form-control-feedback" ng-class="{'glyphicon-warning-sign': personForm.emailAddress.$invalid, 'glyphicon-ok': personForm.emailAddress.$valid}"></span>
+        </div>
+        <div class="form-group has-feedback" ng-class="{'has-warning': personForm.firstName.$invalid, 'has-success': personForm.firstName.$valid}">
+            <label for="firstName">First Name</label>
+            <input type="text" class="form-control input-large" id="firstName" name="firstName" required ng-model="person.firstName">
+            <span class="glyphicon form-control-feedback" ng-class="{'glyphicon-warning-sign': personForm.firstName.$invalid, 'glyphicon-ok': personForm.firstName.$valid}"></span>
+        </div>
+        <div class="form-group has-feedback" ng-class="{'has-warning': personForm.lastName.$invalid, 'has-success': personForm.lastName.$valid}">
+            <label for="lastName">Last Name</label>
+            <input type="text" class="form-control input-large" id="lastName" name="lastName" required ng-model="person.lastName">
+            <span class="glyphicon form-control-feedback" ng-class="{'glyphicon-warning-sign': personForm.lastName.$invalid, 'glyphicon-ok': personForm.lastName.$valid}"></span>
+        </div>        
+    </form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary btn-md active" ng-disabled="personForm.$invalid" ng-click="ok()" >OK</button>
+    <button class="btn btn-warning btn-md active" ng-click="cancel()">Cancel</button>
+</div>
